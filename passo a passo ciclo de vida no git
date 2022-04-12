@@ -1,0 +1,82 @@
+git status > ver como esta a condição
+
+
+criamos um novo diretório e demos um novo git status
+
+
+git status
+No ramo master
+Changes not staged for commit:
+  (utilize "git add/rm <arquivo>..." para atualizar o que será submetido)
+  (use "git restore <file>..." to discard changes in working directory)
+	deleted:    strogonoff.md
+
+Arquivos não monitorados:
+  (utilize "git add <arquivo>..." para incluir o que será submetido)
+	receitas/
+
+nenhuma modificação adicionada à submissão (utilize "git add" e/ou "git commit -a")
+(base) silvio_mancilha@pop-os:~/workspace/livro-receitas$ 
+
+
+ > então agora recrianos a "conexão" do arquivo com git conforme instrução do mm:
+ 
+ 
+
+(base) silvio_mancilha@pop-os:~/workspace/livro-receitas$ git add strogonoff.md receitas/
+(base) silvio_mancilha@pop-os:~/workspace/livro-receitas$ git status
+No ramo master
+Mudanças a serem submetidas:
+  (use "git restore --staged <file>..." to unstage)
+	renamed:    strogonoff.md -> receitas/strogonoff.md
+	
+	
+	
+> agora fazemos um commit para realizar o procedimento:
+
+silvio_mancilha@pop-os:~/workspace/livro-receitas$ git commit -m "cria pasta receitas, move arquivo para receitas"
+[master 92902d5] cria pasta receitas, move arquivo para receitas
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ rename strogonoff.md => receitas/strogonoff.md (100%)
+ 
+ 
+ criou um novo sha 
+ 
+ 
+ 
+ base) silvio_mancilha@pop-os:~/workspace/livro-receitas$ git status
+No ramo master
+nothing to commit, working tree clean
+
+
+
+(base) silvio_mancilha@pop-os:~/workspace/livro-receitas$ echo > README.md
+(base) silvio_mancilha@pop-os:~/workspace/livro-receitas$ ls
+README.md  receitas
+(base) silvio_mancilha@pop-os:~/workspace/livro-receitas$ ls
+README.md  receitas
+(base) silvio_mancilha@pop-os:~/workspace/livro-receitas$ echo > README.md
+(base) silvio_mancilha@pop-os:~/workspace/livro-receitas$ git status
+No ramo master
+Arquivos não monitorados:
+  (utilize "git add <arquivo>..." para incluir o que será submetido)
+	README.md
+
+nada adicionado ao envio mas arquivos não registrados estão presentes (use "git add" to registrar)
+
+
+
+criamos novo arquivo readme.md e lançamos no git e fizemos commit
+
+(base) silvio_mancilha@pop-os:~/workspace/livro-receitas$ git add *
+(base) silvio_mancilha@pop-os:~/workspace/livro-receitas$ git commit -m "adiciona index"
+[master d541933] adiciona index
+ 2 files changed, 10 insertions(+)
+ create mode 100644 README.md
+ create mode 100644 README.md~
+
+
+
+
+
+
